@@ -1,35 +1,42 @@
 Package: com.hnd.hndcastbluetoothbackend.roothide
-Name: HNDCast Bluetooth Backend (RootHide)
-Version: 0.1.63~b63
+Version: 0.1.68~b68
 Architecture: iphoneos-arm64e
-Description: HNDCast private RootHide Bluetooth Backend and adapter
- The Backend is the single lifecycle owner and exposes the canonical snapshot.
- It refuses duplicate BTstack owners and keeps Phase A1 discovery deferred until device Gate 1 passes.
-Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.63~b63)
-Section: Utilities
-Priority: optional
-Maintainer: HNDCast project
-Filename: ./debs/HNDCastBluetoothBackend-RootHide-v0.1.63-b63-20260914-090059.deb
-Size: 31372
-SHA256: e2d6a18afb110ab050476fe25671d651afc53fa2ae7ba0c0cba68dbc19cf1722
+Description: HNDCast Build68 Backend (RootHide)
+Depends: com.hnd.hndcasttransport.roothide (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastBackend-RootHide-v0.1.68-b68-20260914-212145.deb
+Size: 7540
+SHA256: b6e0a811f422bfcf0a46825b4a300349ebb567056a104c98423ae95e02fea25e
+
+Package: com.hnd.hndcastbluetoothbackend.rootless
+Version: 0.1.68~b68
+Architecture: iphoneos-arm64
+Description: HNDCast Build68 Backend (Rootless)
+Depends: com.hnd.hndcasttransport.rootless (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastBackend-Rootless-v0.1.68-b68-20260914-212145.deb
+Size: 6992
+SHA256: bb40de2bb5bb8c1b5113569a50d2775062d598b8931f89af9350299398949a2c
+
+Package: com.hnd.hndcastbridge
+Version: 0.1.68~b68
+Architecture: iphoneos-arm64
+Description: HNDCast Build68 Bridge (Rootless)
+Depends: com.hnd.hndcasttransport.rootless (= 0.1.68~b68), com.hnd.hndcastbluetoothbackend.rootless (= 0.1.68~b68), com.hnd.hndcastreceiver (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastBridge-Rootless-v0.1.68-b68-20260914-212145.deb
+Size: 34404
+SHA256: 34d1efd5982ca9eedac90ebf22769ccaec034fae527038530f8f5952239c64a5
 
 Package: com.hnd.hndcastbridge.roothide
-Name: HNDCastBridge (RootHide)
-Version: 0.1.63~b63
+Version: 0.1.68~b68
 Architecture: iphoneos-arm64e
-Description: HNDCast optional CarPlay gateway bridge (RootHide)
- Experimental loopback IPC bridge with an optional Showcase-style receiver adapter.
- Gateway is disabled by default and is ready only after Runtime IPC and real external Backend status/media evidence are observed.
- No CarBridge binary, private framework, signing key, pairing key, certificate, or injection hook is bundled.
-Depends: firmware (>= 15.0), com.hnd.hndcastreceiver.roothide (= 0.1.63~b63), com.hnd.hndcastbtstack.roothide (= 0.1.63~b63), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.63~b63)
-Conflicts: com.hnd.hndcastbridge
-Replaces: com.hnd.hndcastbridge
-Section: Utilities
-Priority: optional
-Maintainer: HNDCast project
-Filename: ./debs/HNDCastBridge-RootHide-v0.1.63-b63-20260914-090112.deb
-Size: 37184
-SHA256: b4cd94301a03b8df767848d88e600fc38778d46957b39731a50462caa3b81407
+Description: HNDCast Build68 Bridge (RootHide)
+Depends: com.hnd.hndcasttransport.roothide (= 0.1.68~b68), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.68~b68), com.hnd.hndcastreceiver.roothide (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastBridge-RootHide-v0.1.68-b68-20260914-212145.deb
+Size: 34796
+SHA256: dd4db350aee76aa6046d0f88057a74e2ae9798cf3e3acf8527d5f0dd4ee04e55
 
 Package: com.hnd.hndcastbtstack.roothide
 Name: HNDCast BTstack service (RootHide)
@@ -46,20 +53,44 @@ Filename: ./debs/HNDCastBTstack-RootHide-v0.1.63-b63-20260914-090059.deb
 Size: 77764
 SHA256: 76a154c9e7cd038f26586eb2a7d1f418fe5cd77e3f77b12cca431d65412ebf19
 
+Package: com.hnd.hndcastreceiver
+Version: 0.1.68~b68
+Architecture: iphoneos-arm64
+Description: HNDCast Build68 Runtime (Rootless)
+Depends: com.hnd.hndcasttransport.rootless (= 0.1.68~b68), com.hnd.hndcastbluetoothbackend.rootless (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastRuntime-Rootless-v0.1.68-b68-20260914-212145.deb
+Size: 20616
+SHA256: 4615b68c61423d5b5c9623210c0c4a97890a4941d209dc7c62f79e394643d42a
+
 Package: com.hnd.hndcastreceiver.roothide
-Name: HNDCastReceiverRuntime (RootHide)
-Version: 0.1.63~b63
+Version: 0.1.68~b68
 Architecture: iphoneos-arm64e
-Description: HNDCast Wireless CarPlay receiver runtime (RootHide)
- Native on-demand IPC client for the external HNDCastBluetoothBackend service.
- It does not bundle GPL binaries, Apple/MFi keys, private frameworks or certificates.
- BAA, iAP2 and media readiness remain protocol/device validation gates.
-Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.63~b63), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.63~b63)
-Conflicts: com.hnd.hndcastreceiver
-Replaces: com.hnd.hndcastreceiver
-Section: Utilities
-Priority: optional
-Maintainer: HNDCast project
-Filename: ./debs/HNDCastReceiverRuntime-RootHide-v0.1.63-b63-20260914-090111.deb
-Size: 24068
-SHA256: f9872bbf3253928b243b203726eff8d9eb98a1f23d46a5de946761af413ccb56
+Description: HNDCast Build68 Runtime (RootHide)
+Depends: com.hnd.hndcasttransport.roothide (= 0.1.68~b68), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.68~b68)
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastRuntime-RootHide-v0.1.68-b68-20260914-212145.deb
+Size: 21632
+SHA256: 33006e6fbb04a08f386153ebc04d1fd9e1e3c1fb113ca6840693ade55536d1b6
+
+Package: com.hnd.hndcasttransport.roothide
+Version: 0.1.68~b68
+Architecture: iphoneos-arm64e
+Description: HNDCast Build68 Transport (RootHide)
+Conflicts: com.hnd.hndcastbtstack.roothide
+Replaces: com.hnd.hndcastbtstack.roothide
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastTransport-RootHide-v0.1.68-b68-20260914-212145.deb
+Size: 11204
+SHA256: f4718ee0319f3e89d480d97c7722746d92be8a42a9ec9a1af93e1771d56c80b1
+
+Package: com.hnd.hndcasttransport.rootless
+Version: 0.1.68~b68
+Architecture: iphoneos-arm64
+Description: HNDCast Build68 Transport (Rootless)
+Conflicts: com.hnd.hndcastbtstack.rootless
+Replaces: com.hnd.hndcastbtstack.rootless
+Maintainer: HNDCast Project
+Filename: ./debs/HNDCastTransport-Rootless-v0.1.68-b68-20260914-212145.deb
+Size: 10760
+SHA256: d8d4d25336d6935c80de83e874cf61a9810c068f94c1a533be35dd2c4476f534
