@@ -16,3 +16,9 @@
 - Run synchronization and verification locally after each project DEB release.
 - Never weaken package validation to obtain a pass.
 - Run `python3 scripts/verify-feed.py` before every push.
+- For HNDCast Build64 and later, when the matching public release contains
+  validated Rootless and RootHide DEBs, publish both flavors in this feed.
+  Rootless and RootHide must retain distinct Package IDs/native package metadata;
+  never make one flavor appear as an upgrade for the other.
+- HNDCast's shared IPA remains outside APT metadata even when both jailbreak
+  flavors are published.
