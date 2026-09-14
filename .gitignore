@@ -1,0 +1,10 @@
+.DS_Store
+*.ipa
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.sha256
+*.log
+build/
+tmp/

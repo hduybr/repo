@@ -1,0 +1,19 @@
+Origin: HND Repo
+Label: HND Repo
+Suite: stable
+Codename: hnd
+Version: 1.0
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e all
+Components: main
+Description: HND Sileo / Zebra Repository
+Date: Mon, 14 Sep 2026 01:02:52 GMT
+
+MD5Sum:
+ be129e6b352ea0baf878bd340ab8f059 3155 Packages
+ df602e8b4266fca08f89ace0a4b54eeb 1154 Packages.gz
+ fc05f55289785507aee10d536950ce57 1289 Packages.bz2
+
+SHA256:
+ 3b310579d5574f3a8b458b0069a12578fd499d6365c154648bd7c4164dfa3614 3155 Packages
+ 1ad008c46452ba2ae7027b2d2bfb906c416a4833bcd5801c118a45f9cb77e38f 1154 Packages.gz
+ 02bbaf33fafd2f65ce9b38d509cc499a586ac652eb6b801d3bc085c7ff453be9 1289 Packages.bz2

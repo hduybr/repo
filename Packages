@@ -1,0 +1,65 @@
+Package: com.hnd.hndcastbluetoothbackend.roothide
+Name: HNDCast Bluetooth Backend (RootHide)
+Version: 0.1.56~b56
+Architecture: iphoneos-arm64e
+Description: HNDCast private RootHide Bluetooth Backend and adapter
+ The Backend is the single lifecycle owner and exposes the canonical snapshot.
+ It refuses duplicate BTstack owners and keeps Phase A1 discovery deferred until device Gate 1 passes.
+Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.56~b56)
+Section: Utilities
+Priority: optional
+Maintainer: HNDCast project
+Filename: ./debs/HNDCastBluetoothBackend-RootHide-v0.1.56-b56-20260914-004827.deb
+Size: 31172
+SHA256: 2bc9da8fab16627ffa4b30f4f9d36d3728b74c20f6aa07bb132d747da510be39
+
+Package: com.hnd.hndcastbridge.roothide
+Name: HNDCastBridge (RootHide)
+Version: 0.1.56~b56
+Architecture: iphoneos-arm64e
+Description: HNDCast optional CarPlay gateway bridge (RootHide)
+ Experimental loopback IPC bridge with an optional Showcase-style receiver adapter.
+ Gateway is disabled by default and is ready only after Runtime IPC and real external Backend status/media evidence are observed.
+ No CarBridge binary, private framework, signing key, pairing key, certificate, or injection hook is bundled.
+Depends: firmware (>= 15.0), com.hnd.hndcastreceiver.roothide (= 0.1.56~b56), com.hnd.hndcastbtstack.roothide (= 0.1.56~b56), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.56~b56)
+Conflicts: com.hnd.hndcastbridge
+Replaces: com.hnd.hndcastbridge
+Section: Utilities
+Priority: optional
+Maintainer: HNDCast project
+Filename: ./debs/HNDCastBridge-RootHide-v0.1.56-b56-20260914-004840.deb
+Size: 37164
+SHA256: d0501cdd8959f318221d0a36f019574fe05365d64bd2c6dde37397fd4380ce21
+
+Package: com.hnd.hndcastbtstack.roothide
+Name: HNDCast BTstack service (RootHide)
+Version: 0.1.56~b56
+Architecture: iphoneos-arm64e
+Description: HNDCast private RootHide BTstack daemon and library
+ The Backend service owns the launchd lifecycle and persistent client.
+ The package never auto-starts and contains no Apple/MFi authentication material.
+Depends: firmware (>= 15.0)
+Section: Utilities
+Priority: optional
+Maintainer: HNDCast project
+Filename: ./debs/HNDCastBTstack-RootHide-v0.1.56-b56-20260914-004827.deb
+Size: 77340
+SHA256: 4fbd8f521e07ba1f35a0f0adb0d88edb9d6c95a4f4a0afed3ac26484cb6ac59b
+
+Package: com.hnd.hndcastreceiver.roothide
+Name: HNDCastReceiverRuntime (RootHide)
+Version: 0.1.56~b56
+Architecture: iphoneos-arm64e
+Description: HNDCast Wireless CarPlay receiver runtime (RootHide)
+ Native on-demand IPC client for the external HNDCastBluetoothBackend service.
+ It does not bundle GPL binaries, Apple/MFi keys, private frameworks or certificates.
+ BAA, iAP2 and media readiness remain protocol/device validation gates.
+Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.56~b56), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.56~b56)
+Conflicts: com.hnd.hndcastreceiver
+Replaces: com.hnd.hndcastreceiver
+Section: Utilities
+Priority: optional
+Maintainer: HNDCast project
+Filename: ./debs/HNDCastReceiverRuntime-RootHide-v0.1.56-b56-20260914-004839.deb
+Size: 24028
+SHA256: 8fa65dd6bfbd8c089fdb9faa68b4599ee4c8d2372ed4ca8f2450ba945e56085e
