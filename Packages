@@ -1,39 +1,39 @@
 Package: com.hnd.hndcastbluetoothbackend.roothide
 Name: HNDCast Bluetooth Backend (RootHide)
-Version: 0.1.60~b60
+Version: 0.1.61~b61
 Architecture: iphoneos-arm64e
 Description: HNDCast private RootHide Bluetooth Backend and adapter
  The Backend is the single lifecycle owner and exposes the canonical snapshot.
  It refuses duplicate BTstack owners and keeps Phase A1 discovery deferred until device Gate 1 passes.
-Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.60~b60)
+Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.61~b61)
 Section: Utilities
 Priority: optional
 Maintainer: HNDCast project
-Filename: ./debs/HNDCastBluetoothBackend-RootHide-v0.1.60-b60-20260914-040804.deb
-Size: 31456
-SHA256: ae2a075f0b28d44c11d5b384edd22e133b177912ef6fb0eacd8e84320779edb5
+Filename: ./debs/HNDCastBluetoothBackend-RootHide-v0.1.61-b61-20260914-054750.deb
+Size: 31548
+SHA256: 52c6a4cb27742e409c07fc0f97af5a8ff1ee0097f84c862778cb4ae589fa8f03
 
 Package: com.hnd.hndcastbridge.roothide
 Name: HNDCastBridge (RootHide)
-Version: 0.1.60~b60
+Version: 0.1.61~b61
 Architecture: iphoneos-arm64e
 Description: HNDCast optional CarPlay gateway bridge (RootHide)
  Experimental loopback IPC bridge with an optional Showcase-style receiver adapter.
  Gateway is disabled by default and is ready only after Runtime IPC and real external Backend status/media evidence are observed.
  No CarBridge binary, private framework, signing key, pairing key, certificate, or injection hook is bundled.
-Depends: firmware (>= 15.0), com.hnd.hndcastreceiver.roothide (= 0.1.60~b60), com.hnd.hndcastbtstack.roothide (= 0.1.60~b60), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.60~b60)
+Depends: firmware (>= 15.0), com.hnd.hndcastreceiver.roothide (= 0.1.61~b61), com.hnd.hndcastbtstack.roothide (= 0.1.61~b61), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.61~b61)
 Conflicts: com.hnd.hndcastbridge
 Replaces: com.hnd.hndcastbridge
 Section: Utilities
 Priority: optional
 Maintainer: HNDCast project
-Filename: ./debs/HNDCastBridge-RootHide-v0.1.60-b60-20260914-040818.deb
-Size: 37176
-SHA256: ab894dc8e0dc42b652c373fe100a3ff8156f13ee3d3dce88927ab492653fd4d1
+Filename: ./debs/HNDCastBridge-RootHide-v0.1.61-b61-20260914-054804.deb
+Size: 37164
+SHA256: 484147f882cf84a30b18e2e265f962a13ffd1b1e38050f78411b0d695c4f7d84
 
 Package: com.hnd.hndcastbtstack.roothide
 Name: HNDCast BTstack service (RootHide)
-Version: 0.1.60~b60
+Version: 0.1.61~b61
 Architecture: iphoneos-arm64e
 Description: HNDCast private RootHide BTstack daemon and library
  The Backend service owns the launchd lifecycle and persistent client.
@@ -42,24 +42,24 @@ Depends: firmware (>= 15.0)
 Section: Utilities
 Priority: optional
 Maintainer: HNDCast project
-Filename: ./debs/HNDCastBTstack-RootHide-v0.1.60-b60-20260914-040804.deb
-Size: 77656
-SHA256: ab7388206601c46eda058874729ce6f53b818cce903a84412e3d1142b9671de7
+Filename: ./debs/HNDCastBTstack-RootHide-v0.1.61-b61-20260914-054750.deb
+Size: 77684
+SHA256: 428c0d6c0973a72b526c4024b71a380c075d12dac0083b07584ce4e52982b4f7
 
 Package: com.hnd.hndcastreceiver.roothide
 Name: HNDCastReceiverRuntime (RootHide)
-Version: 0.1.60~b60
+Version: 0.1.61~b61
 Architecture: iphoneos-arm64e
 Description: HNDCast Wireless CarPlay receiver runtime (RootHide)
  Native on-demand IPC client for the external HNDCastBluetoothBackend service.
  It does not bundle GPL binaries, Apple/MFi keys, private frameworks or certificates.
  BAA, iAP2 and media readiness remain protocol/device validation gates.
-Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.60~b60), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.60~b60)
+Depends: firmware (>= 15.0), com.hnd.hndcastbtstack.roothide (= 0.1.61~b61), com.hnd.hndcastbluetoothbackend.roothide (= 0.1.61~b61)
 Conflicts: com.hnd.hndcastreceiver
 Replaces: com.hnd.hndcastreceiver
 Section: Utilities
 Priority: optional
 Maintainer: HNDCast project
-Filename: ./debs/HNDCastReceiverRuntime-RootHide-v0.1.60-b60-20260914-040817.deb
-Size: 24112
-SHA256: a03f6e56fa7c2497949ff702be3b2115983a0f49d9f2b759525d39980204bcc4
+Filename: ./debs/HNDCastReceiverRuntime-RootHide-v0.1.61-b61-20260914-054802.deb
+Size: 23960
+SHA256: adf54c3d880e04bb095970dde9a7d410f5c94ea08100aea51e2a2d4c1fb2fca5
