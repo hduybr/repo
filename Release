@@ -6,14 +6,14 @@ Version: 1.0
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e all
 Components: main
 Description: HND Sileo / Zebra Repository
-Date: Mon, 14 Sep 2026 05:55:08 GMT
+Date: Mon, 14 Sep 2026 08:06:12 GMT
 
 MD5Sum:
- ddd06ade1224498c616ec37094b0aeeb 3155 Packages
- 53036c2223c71c16b0eac904f7f28163 1151 Packages.gz
- e8840ed69cb180990a6abab49bc7b1ae 1300 Packages.bz2
+ a409ccb7a51f1177efbdea4eabeefb3e 3155 Packages
+ 4783b8ffb503867cd383c528e75e3e09 1157 Packages.gz
+ fb56a1a0648686615d5cb5e7513dd04f 1288 Packages.bz2
 
 SHA256:
- 95bb8c28b081c4a02b1c6667bd9aacdc20c762e4db33b3a8764cba04b7df5152 3155 Packages
- eb0f72f19e310a88c5e4ec2650d71efb4db0628262ec506717fefbefff78f9a4 1151 Packages.gz
- b7ac6dafb9505acb8bd24525015047159639d30fe1271bc1ad458e70c5e04544 1300 Packages.bz2
+ 046912d68d37f65316a04e2c9db73d159704d515aee5581819d8b4d26e27b42a 3155 Packages
+ 3ef9de6770d74f8e97aa3ee62cbf075dfee69af6809c84b60af6e175f4fc1046 1157 Packages.gz
+ daf67fcef4558b8c6d9bea6ae50be49815c61986d135ec3372b033709050c644 1288 Packages.bz2
